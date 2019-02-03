@@ -8,13 +8,16 @@ import TextoAnimado from './TextoAnimado';
 
 const styles = {
     Imagem: {
-        width:'100%',
-        height:658,
+        display:'block',
+        width:'100vw',
+        minHeight:'100vh',
         backgroundImage: `url(${ImgCode})`,
+        backgroundSize: 'cover',
+        overflow: 'hidden',
     },
     Texto:{
         color:'white',
-        paddingTop:200
+        paddingTop:'35vh'
     },
 };
 function MediaCard(props) {

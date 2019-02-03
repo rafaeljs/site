@@ -5,7 +5,7 @@ import ImgCode from "../Img/Code.jpg";
 const styles = {
     Texto:{
         color:'white',
-        paddingLeft:450,
+        paddingLeft:'33vw',
     },
 };
 
