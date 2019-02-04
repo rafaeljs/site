@@ -1,6 +1,5 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import ImgCode from "../Img/Code.jpg";
 
 const styles = {
     Texto:{
@@ -40,20 +39,22 @@ class TextoAnimado extends React.Component{
     componentDidMount() {
         window.setInterval(function () {
             if(this.state.Name){
-                if(this.state.Restante.length == this.state.CountNome){
-                    if(this.state.contador == 5){
-                        this.state.contador = 0;
+                if(this.state.Restante.length === this.state.CountNome){
+                    if(this.state.contador === 5){
                         this.setState({
+                            contador:0,
                             Back:true,
                         });
                         this.setTexto(this.state.Restante.length-1,this.state.Name);
                     }
                     else
-                        this.state.contador++;
+                        this.setState({
+                            contador:this.state.contador+1,
+                        });
                 }
                 else{
                     if(this.state.Back){
-                        if(this.state.Restante.length == 0) {
+                        if(this.state.Restante.length === 0) {
                             this.setState({
                                 Back: false,
                             });
@@ -67,20 +68,22 @@ class TextoAnimado extends React.Component{
                 }
             }
             else{
-                if(this.state.Restante.length == this.state.CountDev){
-                    if(this.state.contador == 5) {
-                        this.state.contador = 0;
+                if(this.state.Restante.length === this.state.CountDev){
+                    if(this.state.contador === 5) {
                         this.setState({
+                            contador:0,
                             Back: true,
                         });
                         this.setTexto(this.state.Restante.length - 1, this.state.Name);
                     }
                     else
-                        this.state.contador++;
+                        this.setState({
+                            contador:this.state.contador+1,
+                        });
                 }
                 else{
                     if(this.state.Back){
-                        if(this.state.Restante.length == 0){
+                        if(this.state.Restante.length === 0){
                             this.setState({
                                 Back:false,
                             });

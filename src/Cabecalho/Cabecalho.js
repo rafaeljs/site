@@ -10,7 +10,7 @@ const styles = {
     Imagem: {
         display:'block',
         width:'100vw',
-        minHeight:'100vh',
+        height:'100vh',
         backgroundImage: `url(${ImgCode})`,
         backgroundSize: 'cover',
         overflow: 'hidden',
@@ -20,7 +20,7 @@ const styles = {
         paddingTop:'35vh'
     },
 };
-function MediaCard(props) {
+function MediaCard() {
         return(
             <div style={styles.Imagem}>
                 <div>
