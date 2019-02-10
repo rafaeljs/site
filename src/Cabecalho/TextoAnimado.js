@@ -4,7 +4,16 @@ import Typography from '@material-ui/core/Typography';
 const styles = {
     Texto:{
         color:'white',
-        paddingLeft:'33vw',
+        paddingLeft:'30vw',
+    },
+    TextoMobile:{
+        color:'white',
+        paddingLeft:'25vw',
+    },
+    saudacao:{
+        color:'white',
+        paddingLeft:'45vw',
+        paddingTop:'40vh',
     },
 };
 
@@ -101,10 +110,14 @@ class TextoAnimado extends React.Component{
     }
 
     render() {
-
+        var tamanho = window.innerWidth <= 760?"title":"display3";
+        var texto = window.innerWidth <= 760?styles.TextoMobile:styles.Texto;
         return(
             <div>
-                <Typography align={"left"} variant={"display3"} style={styles.Texto}>
+                <Typography  align={"left"} variant={tamanho} style={styles.saudacao}>
+                    Olá!
+                </Typography>
+                <Typography align={"left"} variant={tamanho} style={texto}>
                     {this.state.Inicio}{this.state.Restante}
                 </Typography>
             </div>
