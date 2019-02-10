@@ -10,33 +10,42 @@ const styles = {
     button: {
         margin:20,
     },
+    buttonMobile: {
+        margin:10,
+        marginTop:50,
+    },
     div:{
         marginRight:0,
-        marginTop:70,
         textAlign:'center',
     },
     img:{
         width:64,
         height:64,
+    },
+    imgMobile:{
+        width:40,
+        height:40,
     }
 };
 
 function Redes() {
+    var tamanho = window.innerWidth <= 760?styles.imgMobile:styles.img;
+    var botao = window.innerWidth <= 760?styles.buttonMobile:styles.button;
     return (
         <div style={styles.div}>
             <a href="https://github.com/rafaeljs">
-                <IconButton style={styles.button}>
-                    <img src={GithubIcon} alt={"Github"} style={styles.img} />
+                <IconButton style={botao}>
+                    <img src={GithubIcon} alt={"Github"} style={tamanho} />
                 </IconButton>
             </a>
             <a href="https://gitlab.com/rafaeljs">
-                <IconButton style={styles.button} >
-                    <img src={GitLabIcon} alt={"Gitlab"} style={styles.img} />
+                <IconButton style={botao} >
+                    <img src={GitLabIcon} alt={"Gitlab"} style={tamanho} />
                 </IconButton>
             </a>
             <a href="https://www.facebook.com/rafael.silverio.39">
-                <IconButton style={styles.button}>
-                    <img src={FacebookIcon} alt={"Facebook"} style={styles.img} />
+                <IconButton style={botao}>
+                    <img src={FacebookIcon} alt={"Facebook"} style={tamanho} />
                 </IconButton>
             </a>
         </div>
