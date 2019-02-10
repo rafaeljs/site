@@ -3,6 +3,7 @@ import Cabecalho from './Cabecalho/Cabecalho';
 import Sobre from './Sobre/Sobre';
 import Habilidades from './Habilidades/Habilidades';
 import Educacao from './Educacao/Educacao';
+import Experiencias from './Experiencias/Experiencias';
 import ReactPageScroller from "react-page-scroller";
 import ButtonSelect from '@material-ui/icons/RadioButtonChecked';
 import ButtonDeselect from '@material-ui/icons/RadioButtonUnchecked';
@@ -12,7 +13,7 @@ import './App.css';
 
 const styles = {
     fixado: {
-        top:'40vh',
+        top:'30vh',
         right:'20px',
         zIndex: 2,
         position: 'fixed',
@@ -85,6 +86,15 @@ class App extends Component {
                           onMouseLeave={this.hoverOff}
                           style={Object.assign({},this.state.hover && this.state.numb === 4 ?
                               styles.hover : styles.teste, cor)}  onClick={() => this.goToPage(3)}/>;
+
+      var botaoExp = this.state.currentPage === 5?  <ButtonSelect onMouseEnter={() => this.hoverOn(5)}
+                                                                  onMouseLeave={this.hoverOff}
+                                                                  style={Object.assign({},this.state.hover && this.state.numb === 5 ?
+                                                                      styles.hover : styles.teste, cor)} onClick={() => this.goToPage(4)}/>:
+          <ButtonDeselect onMouseEnter={() => this.hoverOn(5)}
+                          onMouseLeave={this.hoverOff}
+                          style={Object.assign({},this.state.hover && this.state.numb === 5 ?
+                              styles.hover : styles.teste, cor)}  onClick={() => this.goToPage(4)}/>;
     return (
       <div className="App">
           <ReactPageScroller ref={c => this.reactPageScroller = c} pageOnChange={this.pageOnChange}>
@@ -92,6 +102,7 @@ class App extends Component {
               <Sobre/>
               <Habilidades/>
               <Educacao/>
+              <Experiencias/>
           </ReactPageScroller>
           <div style={styles.fixado}>
               <Tooltip title={"Saudações"} placement="left">
@@ -108,6 +119,10 @@ class App extends Component {
               <br/>
               <Tooltip title={"Educação"} placement="left">
                   {botaoEdu}
+              </Tooltip>
+              <br/>
+              <Tooltip title={"Experiencia"} placement="left">
+                  {botaoExp}
               </Tooltip>
               <br/>
           </div>
