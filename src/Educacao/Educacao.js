@@ -24,13 +24,13 @@ const styles = {
     MarginMobile:{
         marginBottom:5,
         backgroundImage:`url(${CircuitoImagem})`,
-        backgroundPosition:'bottom center'
+        backgroundPosition:'bottom center',
     },
     Margin:{
         padding:20,
         marginBottom:20,
-        backgroundImage:`url(${CircuitoImagem})`,
-        backgroundPosition:'bottom center'
+        backgroundImage:`linear-gradient(to bottom, rgba(255,255,255,0.4), rgba(255,255,255,0.4)),url(${CircuitoImagem})`,
+        backgroundPosition:'bottom center',
     }
 };
 
