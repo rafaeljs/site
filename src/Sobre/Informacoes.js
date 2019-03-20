@@ -65,7 +65,7 @@ class ImageAvatars extends React.Component {
                     </Typography>
                     <br/>
                     <Typography variant={texto} style={styles.texto}>
-                        Olá! Me chamo Rafael José Silvério, tenho 23 anos e atualmente sou desevolvedor Full-Stack .Net
+                        Olá! Me chamo Rafael José Silvério, tenho 23 anos e atualmente sou desenvolvedor Full-Stack .Net
                     </Typography>
                 </div>
             </div>
